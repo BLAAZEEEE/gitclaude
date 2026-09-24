@@ -2,7 +2,7 @@
 
 Shared custom Claude Code skills. They live in `.claude/skills/` and load automatically when you run Claude Code in a clone of this repo.
 
-To use them in every project, copy them to your personal skills folder:
+To install them on your machine, paste the content of `initialisation.txt` into Claude Code. Or copy them manually:
 
 ```bash
 cp -r .claude/skills/* ~/.claude/skills/

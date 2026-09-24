@@ -1,0 +1,22 @@
+Installe sur cette machine les skills Claude Code partagés du dépôt https://github.com/BLAAZEEEE/gitclaude. Procède ainsi :
+
+1. Détecte le système (Windows, macOS ou Linux) et le dossier de skills personnel : ~/.claude/skills (sous Windows : %USERPROFILE%\.claude\skills). Crée-le s'il n'existe pas.
+
+2. Clone le dépôt dans un dossier temporaire (git clone --depth 1). Si git n'est pas installé, télécharge l'archive ZIP de la branche main et extrais-la.
+
+3. Liste les dossiers présents dans .claude/skills/ du dépôt. Pour chacun :
+   - s'il n'existe pas dans mon dossier de skills, copie-le entièrement (avec ses sous-dossiers, par exemple scripts/) ;
+   - s'il existe déjà et que le contenu est identique, ne fais rien ;
+   - s'il existe déjà avec un contenu différent, ne l'écrase pas en silence : montre-moi la différence et demande-moi si je veux le remplacer. Si j'accepte, sauvegarde d'abord l'ancien dossier sous <nom>.bak-<date>.
+   Ne touche à aucun autre dossier de mon dossier de skills.
+
+4. Installe les dépendances du skill simplifie (utilisé aussi par doc) :
+   - le module Python markdown : pip install markdown (utilise python -m pip ou python3 -m pip selon ce qui est disponible) ;
+   - vérifie que Chrome ou Edge est installé. Si aucun des deux n'est trouvé, dis-le-moi sans rien installer.
+   - Sur macOS, le script md2pdf.py ne cherche pas le chemin de Chrome : ajoute "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" et "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge" à la liste BROWSERS de ~/.claude/skills/simplifie/scripts/md2pdf.py.
+
+5. Teste la génération PDF : crée un petit fichier test.md (un titre, un tableau de 2 colonnes) dans un dossier temporaire, lance python ~/.claude/skills/simplifie/scripts/md2pdf.py test.md, vérifie que test.pdf est créé, puis supprime les fichiers de test.
+
+6. Supprime le clone temporaire.
+
+7. Termine par un récapitulatif court : skills installés, skills ignorés ou remplacés, dépendances installées, résultat du test PDF. Rappelle-moi de redémarrer Claude Code pour que les nouveaux skills soient chargés.
