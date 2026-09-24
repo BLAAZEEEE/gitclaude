@@ -23,5 +23,6 @@ cp -r .claude/skills/* ~/.claude/skills/
 | industrial-brutalist-ui | Swiss/brutalist terminal-style interfaces |
 | minimalist-ui | Clean editorial-style interfaces |
 | redesign-existing-projects | Upgrade existing sites to premium quality |
+| simplifie | Simple school/project deliverables, only what the brief asks; `md2pdf.py` for PDF |
 | stitch-design-taste | DESIGN.md generation for Google Stitch |
 | ui-ux-pro-max | UI/UX design intelligence (styles, palettes, fonts) |
