@@ -11,6 +11,7 @@ cp -r .claude/skills/* ~/.claude/skills/
 | Skill | Purpose |
 |---|---|
 | brandkit | Brand-kit / identity board image generation |
+| doc | PDF documentation with the navy charte (requires `simplifie`) |
 | design-taste-frontend | Anti-slop frontend design (v2) |
 | design-taste-frontend-v1 | Original v1 of the above |
 | full-output-enforcement | No truncation or placeholders in output |
