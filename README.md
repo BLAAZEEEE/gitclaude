@@ -24,5 +24,6 @@ cp -r .claude/skills/* ~/.claude/skills/
 | minimalist-ui | Clean editorial-style interfaces |
 | redesign-existing-projects | Upgrade existing sites to premium quality |
 | simplifie | Simple school/project deliverables, only what the brief asks; `md2pdf.py` for PDF |
+| web-compliance-gate | Web audit and fixes: RGPD, SEO, security, SSL/TLS, performance, accessibility (160 checks) |
 | stitch-design-taste | DESIGN.md generation for Google Stitch |
 | ui-ux-pro-max | UI/UX design intelligence (styles, palettes, fonts) |

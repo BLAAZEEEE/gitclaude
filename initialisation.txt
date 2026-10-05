@@ -15,8 +15,10 @@ Installe sur cette machine les skills Claude Code partagés du dépôt https://g
    - vérifie que Chrome ou Edge est installé. Si aucun des deux n'est trouvé, dis-le-moi sans rien installer.
    - Sur macOS, le script md2pdf.py ne cherche pas le chemin de Chrome : ajoute "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" et "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge" à la liste BROWSERS de ~/.claude/skills/simplifie/scripts/md2pdf.py.
 
-5. Teste la génération PDF : crée un petit fichier test.md (un titre, un tableau de 2 colonnes) dans un dossier temporaire, lance python ~/.claude/skills/simplifie/scripts/md2pdf.py test.md, vérifie que test.pdf est créé, puis supprime les fichiers de test.
+5. Prépare le skill web-compliance-gate : lance python ~/.claude/skills/web-compliance-gate/scripts/audit.py --doctor (ou python3). Il liste les outils manquants (Playwright + Chromium, Lighthouse, Semgrep, Gitleaks, pip-audit…) avec leur commande d'installation. Montre-moi la liste et installe ceux que j'accepte, puis relance --doctor pour vérifier.
 
-6. Supprime le clone temporaire.
+6. Teste la génération PDF : crée un petit fichier test.md (un titre, un tableau de 2 colonnes) dans un dossier temporaire, lance python ~/.claude/skills/simplifie/scripts/md2pdf.py test.md, vérifie que test.pdf est créé, puis supprime les fichiers de test.
 
-7. Termine par un récapitulatif court : skills installés, skills ignorés ou remplacés, dépendances installées, résultat du test PDF. Rappelle-moi de redémarrer Claude Code pour que les nouveaux skills soient chargés.
+7. Supprime le clone temporaire.
+
+8. Termine par un récapitulatif court : skills installés, skills ignorés ou remplacés, dépendances installées, résultat du test PDF et de --doctor. Rappelle-moi de redémarrer Claude Code pour que les nouveaux skills soient chargés.
